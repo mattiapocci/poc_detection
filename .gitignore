@@ -2,3 +2,4 @@ temp_dir/
 datasets/
 cvelist.json
 *.pyc
+.vscode/settings.json
