@@ -3,3 +3,5 @@ datasets/
 cvelist.json
 *.pyc
 .vscode/settings.json
+*.obj
+*.exe
