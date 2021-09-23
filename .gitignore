@@ -5,3 +5,4 @@ cvelist.json
 .vscode/settings.json
 *.obj
 *.exe
+venvs/
