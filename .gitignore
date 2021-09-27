@@ -6,3 +6,4 @@ cvelist.json
 *.obj
 *.exe
 venvs/
+venv/
