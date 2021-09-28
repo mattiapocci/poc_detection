@@ -8,3 +8,4 @@ cvelist.json
 venvs/
 venv/
 SAFETorch/SAFEtorch/
+SAFETorch/radare2
