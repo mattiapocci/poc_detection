@@ -1,12 +1,14 @@
-from utils.function_normalizer import FunctionNormalizer
-from utils.instructions_converter import InstructionsConverter
-from utils.capstone_disassembler import disassemble
-from utils.radare_analyzer import BinaryAnalyzer
-from safetorch.safe_network import SAFE
-from safetorch.parameters import Config
+import os
+os.chdir('C:/Users/matti/Desktop/Magistrale/tesi/poc_detection/SAFETorch')
+from SAFEtorch.utils.function_normalizer import FunctionNormalizer
+from SAFEtorch.utils.instructions_converter import InstructionsConverter
+from SAFEtorch.utils.capstone_disassembler import disassemble
+from SAFEtorch.utils.radare_analyzer import BinaryAnalyzer
+from SAFEtorch.safetorch.safe_network import SAFE
+from SAFEtorch.safetorch.parameters import Config
 import torch
 import sys
-import gc
+
 
 #def disassemble(exe):
     # initialize SAFE
@@ -16,12 +18,12 @@ config = Config()
 safe = SAFE(config)
 
 # load instruction converter and normalizer
-I2V_FILENAME = "/home/mattia/Desktop/tesi_magistrale/SAFEtorch/SAFEtorch/model/word2id.json"
+I2V_FILENAME = "SAFEtorch/model/word2id.json"
 converter = InstructionsConverter(I2V_FILENAME)
 normalizer = FunctionNormalizer(max_instruction=150)
 
 # load SAFE weights
-SAFE_torch_model_path = "/home/mattia/Desktop/tesi_magistrale/SAFEtorch/SAFEtorch/model/SAFEtorch.pt"
+SAFE_torch_model_path = "SAFEtorch/model/SAFEtorch.pt"
 state_dict = torch.load(SAFE_torch_model_path)
 safe.load_state_dict(state_dict)
 safe = safe.eval()
