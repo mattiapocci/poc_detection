@@ -10,3 +10,4 @@ venv/
 SAFETorch/SAFEtorch/
 SAFETorch/radare2
 .vscode/
+radare2/
