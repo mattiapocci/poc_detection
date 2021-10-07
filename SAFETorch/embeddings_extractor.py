@@ -12,9 +12,6 @@ os.chdir('/home/mattia/Desktop/tesi_magistrale/poc_detection/SAFETorch')
 I2V_FILENAME = "/home/mattia/Desktop/tesi_magistrale/SAFEtorch/SAFEtorch/model/word2id.json"
 SAFE_torch_model_path = "/home/mattia/Desktop/tesi_magistrale/SAFEtorch/SAFEtorch/model/SAFEtorch.pt"
 
-
-#def disassemble(exe):
-    # initialize SAFE
 exe = sys.argv[1]
 
 config = Config()
@@ -28,7 +25,7 @@ normalizer = FunctionNormalizer(max_instruction=150)
 state_dict = torch.load(SAFE_torch_model_path)
 safe.load_state_dict(state_dict)
 safe = safe.eval()
-dizionarione = {}
+input_exe_embeddings = {}
 try:
     #print('inizio')
     binary = BinaryAnalyzer(exe)
@@ -41,15 +38,10 @@ try:
             instructions, length = normalizer.normalize_functions([converted_instructions])
             tensor = torch.LongTensor(instructions[0])
             function_embedding = safe(tensor, length)
-            dizionarione[hex(offset)] = function_embedding
-            #listone.append((hex(offset), function_embedding))
+            input_exe_embeddings[hex(offset)] = function_embedding
         except:
             continue
 except:
     pass
 
-#print(listone)
-torch.save(dizionarione,'/home/mattia/Desktop/tesi_magistrale/SAFEtorch/SAFEtorch/dizionarione.pt')
-
-
-
+torch.save(input_exe_embeddings,'/home/mattia/Desktop/tesi_magistrale/SAFEtorch/SAFEtorch/input_exe_embeddings.pt')
