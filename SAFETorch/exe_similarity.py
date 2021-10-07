@@ -5,20 +5,24 @@ import embeddings_extractor
 from tqdm import tqdm
 #UBUNTU
 import sys 
-sys.path.append('/home/mattia/Desktop/tesi_magistrale/SAFEtorch/SAFEtorch')
+#sys.path.append('/home/mattia/Desktop/tesi_magistrale/SAFEtorch/SAFEtorch')
+sys.path.append('/root/poc_detection/SAFETorch/SAFEtorch')
 from utils.function_normalizer import FunctionNormalizer
 from utils.instructions_converter import InstructionsConverter
 from utils.capstone_disassembler import disassemble
 from utils.radare_analyzer import BinaryAnalyzer
 from safetorch.safe_network import SAFE
 from safetorch.parameters import Config
-os.chdir('/home/mattia/Desktop/tesi_magistrale/poc_detection/SAFETorch')
+#os.chdir('/home/mattia/Desktop/tesi_magistrale/poc_detection/SAFETorch')
+os.chdir('/root/poc_detection/SAFETorch')
 exploits_embeddings = torch.load('../datasets/exploits_embeddings_complete.pt')
 #exploits_embeddings = torch.load('/media/mattia/2068D30968D2DC9A1/Users/matti/Desktop/Magistrale/tesi/poc_detection/temp_dir/exploits_embeddings_complete.pt')
 
 print('exploits_embeddings loaded')
-I2V_FILENAME = "/home/mattia/Desktop/tesi_magistrale/SAFEtorch/SAFEtorch/model/word2id.json"
-SAFE_torch_model_path = "/home/mattia/Desktop/tesi_magistrale/SAFEtorch/SAFEtorch/model/SAFEtorch.pt"
+# I2V_FILENAME = "/home/mattia/Desktop/tesi_magistrale/SAFEtorch/SAFEtorch/model/word2id.json"
+# SAFE_torch_model_path = "/home/mattia/Desktop/tesi_magistrale/SAFEtorch/SAFEtorch/model/SAFEtorch.pt"
+I2V_FILENAME = "SAFEtorch/model/word2id.json"
+SAFE_torch_model_path = "SAFEtorch/model/SAFEtorch.pt"
 
 
 
@@ -79,6 +83,7 @@ safe = safe.eval()
 
 os.system('python embeddings_extractor.py ' + exe)
 
+# da cambiare per il docker container
 input_exe_embeddings = torch.load('/home/mattia/Desktop/tesi_magistrale/SAFEtorch/SAFEtorch/input_exe_embeddings.pt')
 os.remove('/home/mattia/Desktop/tesi_magistrale/SAFEtorch/SAFEtorch/input_exe_embeddings.pt')
 if not input_exe_embeddings:

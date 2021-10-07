@@ -1,6 +1,7 @@
 import os
 import torch
 import sys
+#da cambiare i path per il docker container
 sys.path.append('/home/mattia/Desktop/tesi_magistrale/SAFEtorch/SAFEtorch')
 from utils.function_normalizer import FunctionNormalizer
 from utils.instructions_converter import InstructionsConverter
