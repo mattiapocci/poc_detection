@@ -3,7 +3,7 @@ import sys
 #load input file
 scores_path = sys.argv[1]
 try:
-    n = sys.argv[2]
+    n = int(sys.argv[2])
 except:
     n = 10
 scores = torch.load(scores_path)
