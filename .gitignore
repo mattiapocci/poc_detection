@@ -1,5 +1,5 @@
 temp_dir/
-datasets/
+datasets/*.csv
 cvelist.json
 *.pyc
 .vscode/settings.json
