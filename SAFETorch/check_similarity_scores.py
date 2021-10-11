@@ -11,4 +11,4 @@ scores = dict(sorted(scores.items(), key=lambda item: item[1], reverse=True))
 i = 1
 print('Top ' + str(n) + ' similar exploits: ')
 for elem in scores:
-    print('ID: ' + elem + ' Similarity: ' + scores[elem])
+    print('ID: ' + str(elem) + ' Similarity: ' + str(scores[elem]))
