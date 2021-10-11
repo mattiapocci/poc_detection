@@ -2,5 +2,13 @@ import torch
 import sys
 #load input file
 scores_path = sys.argv[1]
+try:
+    n = sys.argv[2]
+except:
+    n = 10
 scores = torch.load(scores_path)
-print(dict(sorted(scores.items(), key=lambda item: item[1], reverse=True)))
+scores = dict(sorted(scores.items(), key=lambda item: item[1], reverse=True))
+i = 1
+print('Top ' + str(n) + ' similar exploits: ')
+for elem in scores:
+    print('ID: ' + elem + ' Similarity: ' + scores[elem])
