@@ -84,8 +84,12 @@ safe = safe.eval()
 os.system('python embeddings_extractor.py ' + exe)
 
 # da cambiare per il docker container
-input_exe_embeddings = torch.load('/home/mattia/Desktop/tesi_magistrale/SAFEtorch/SAFEtorch/input_exe_embeddings.pt')
-os.remove('/home/mattia/Desktop/tesi_magistrale/SAFEtorch/SAFEtorch/input_exe_embeddings.pt')
+#/root/poc_detection/
+input_exe_embeddings_path = '/root/poc_detection/SAFETorch/SAFEtorch/input_exe_embeddings.pt'
+# input_exe_embeddings = torch.load('/home/mattia/Desktop/tesi_magistrale/SAFEtorch/SAFEtorch/input_exe_embeddings.pt')
+# os.remove('/home/mattia/Desktop/tesi_magistrale/SAFEtorch/SAFEtorch/input_exe_embeddings.pt')
+input_exe_embeddings = torch.load(input_exe_embeddings_path)
+os.remove(input_exe_embeddings_path)
 if not input_exe_embeddings:
     print('invalid input exe')
     sys.exit(-1)
@@ -116,4 +120,4 @@ for entry in tqdm(exploits_embeddings):
         key = entry
 print('L\'exploit con maggiore somiglianza è ' + key + ' con valore ' + str(max))
 
-torch.save(means, '/home/mattia/Desktop/tesi_magistrale/SAFEtorch/SAFEtorch/' + output_name)
+torch.save(means, '/root/poc_detection/SAFETorch/SAFEtorch/' + output_name)
