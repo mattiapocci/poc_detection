@@ -14,3 +14,4 @@ for elem in scores:
     if i>n:
         sys.exit(0)
     print('ID: ' + str(elem) + ' Similarity: ' + str(scores[elem]))
+    i = i + 1
