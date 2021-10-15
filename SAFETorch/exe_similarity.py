@@ -67,7 +67,6 @@ def max_similarity(nome, embedding, exploit_dict, colors):
         else: continue
     
     colors.append(n2) #function has been chosen, cannot be chosen by another embedding
-    print(str(colors))
     return res,nome,n2,colors
 
 exe = sys.argv[1]
