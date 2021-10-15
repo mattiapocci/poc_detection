@@ -51,20 +51,23 @@ def cosine_similarity(fun1,fun2):
     cos = torch.nn.CosineSimilarity(dim=1, eps=1e-6)
     return cos(fun1, fun2)
 
-def max_similarity(nome, embedding, exploit_dict):
+# colors contains already seen functions
+def max_similarity(nome, embedding, exploit_dict, colors):
     res = 0
-    n1 = ''
-    n2 = ''
+    n2 = '' # name of function of the exploit which is max similar to input function
     for key in exploit_dict:
-        nome2 = key
-        embedding2 = exploit_dict[key]
-        #print(lista2)
-        cos = cosine_similarity(embedding,embedding2).item()
-        if(cos > res):
-            res = cos
-            n1 = nome
-            n2 = nome2
-    return res,n1,n2
+        if not (key in colors):
+            nome2 = key
+            embedding2 = exploit_dict[key]
+            #print(lista2)
+            cos = cosine_similarity(embedding,embedding2).item()
+            if(cos > res):
+                res = cos
+                n2 = nome2
+        else: continue
+    
+    colors.append(n2) #function has been chosen, cannot be chosen by another embedding
+    return res,nome,n2,colors
 
 exe = sys.argv[1]
 output_name = exe.split('/')[-1].replace('.exe','.pt')
@@ -105,11 +108,15 @@ for key in d:
 means = {}
 key = ''
 max = 0
+# Per ogni exploit
 for entry in tqdm(exploits_embeddings):
     count = 0
     acc = 0
+    colors = []
+    # Calcola la similarity con input
     for elem in input_exe_embeddings:
-        cos = max_similarity(elem,input_exe_embeddings[elem],exploits_embeddings[entry])
+        cos = max_similarity(elem,input_exe_embeddings[elem],exploits_embeddings[entry],colors)
+        colors = cos[3]
         #print('La max similarity tra ' + str(elem) + ' e l\'exploit ' + str(entry) + ': ' + str(cos[0]) + ' . Relativo alle funzioni ' + str(cos[1]) + ' e ' + str(cos[2]))
         acc = acc + cos[0]
         count = count + 1
