@@ -51,7 +51,7 @@ def cosine_similarity(fun1,fun2):
     cos = torch.nn.CosineSimilarity(dim=1, eps=1e-6)
     c = cos(fun1, fun2)
     # print('COSINE SIMILARITY <' + str(fun1) + '>,<' + str(fun2) + '> = ' + str(c))
-    print('COSINE SIMILARITY = ' + str(c))
+    # print('COSINE SIMILARITY = ' + str(c))
     return c
 
 # colors contains already seen functions
@@ -68,7 +68,7 @@ def max_similarity(nome, embedding, exploit_dict, colors):
                 res = cos
                 n2 = nome2
         else: continue
-    print('Max similarity: ' + str(res))
+    # print('Max similarity: ' + str(res))
     colors.append(n2) #function has been chosen, cannot be chosen by another embedding
     return res,nome,n2,colors
 
