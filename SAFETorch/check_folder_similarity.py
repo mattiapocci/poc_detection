@@ -10,7 +10,7 @@ except:
     exit(-1)
 
 try:
-    i = sys.argv[2]
+    i = int(sys.argv[2])
 except:
     i = 5
 
