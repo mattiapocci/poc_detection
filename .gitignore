@@ -12,3 +12,4 @@ SAFETorch/radare2
 .vscode/
 radare2/
 SAFETorch/list_expid_cves.txt
+SAFETorch/Malwarebazaar/
