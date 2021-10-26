@@ -72,8 +72,17 @@ def max_similarity(nome, embedding, exploit_dict, colors):
     colors.append(n2) #function has been chosen, cannot be chosen by another embedding
     return res,nome,n2,colors
 
-exe = sys.argv[1]
-output_name = exe.split('/')[-1].replace('.exe','.pt')
+try:
+    exe = sys.argv[1]
+    output_name = exe.split('/')[-1].replace('.exe','.pt')
+except:
+    print('Usage: python exe_similarity.py <input_exe_path> <optional_output_path>')
+    exit(-1)
+
+try:
+    output_path = sys.argv[2]
+except:
+    output_path = '/root/poc_detection/SAFETorch/SAFEtorch/' + output_name
 
 config = Config()
 safe = SAFE(config)
@@ -132,4 +141,4 @@ for entry in tqdm(exploits_embeddings):
         key = entry
 print('L\'exploit con maggiore somiglianza è ' + key + ' con valore ' + str(max))
 
-torch.save(means, '/root/poc_detection/SAFETorch/SAFEtorch/' + output_name)
+torch.save(means, output_path)
