@@ -49,7 +49,9 @@ import embeddings_extractor
 
 def cosine_similarity(fun1,fun2):
     cos = torch.nn.CosineSimilarity(dim=1, eps=1e-6)
-    return cos(fun1, fun2)
+    c = cos(fun1, fun2)
+    print('COSINE SIMILARITY <' + str(fun1) + '>,<' + str(fun2) + '> = ' + str(c))
+    return c
 
 # colors contains already seen functions
 def max_similarity(nome, embedding, exploit_dict, colors):
@@ -110,6 +112,8 @@ key = ''
 max = 0
 # Per ogni exploit
 for entry in tqdm(exploits_embeddings):
+    if not exploits_embeddings[entry]:
+        continue
     count = 0
     acc = 0
     colors = []
