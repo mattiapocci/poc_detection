@@ -9,6 +9,11 @@ except:
     print('Usage: python check_folder_similarity.py <folder_path>')
     exit(-1)
 
+try:
+    i = sys.argv[2]
+except:
+    i = 5
+
 ls = list(filter(lambda elem: 'exe' in elem, os.listdir(folder)))
 
 try:
@@ -17,6 +22,8 @@ except:
     already_processed = []
 
 for exe in tqdm(ls):
+    if i == 0:
+        sys.exit(1)
     if exe in already_processed:
         print('Skipping ' + exe + ': already processed')
         continue
@@ -26,3 +33,4 @@ for exe in tqdm(ls):
     already_processed.append(exe)
     torch.save(already_processed,'already_processed.pt')
     print('Finished ' + exe)
+    i = i - 1
