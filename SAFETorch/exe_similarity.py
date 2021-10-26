@@ -76,11 +76,14 @@ try:
     exe = sys.argv[1]
     output_name = exe.split('/')[-1].replace('.exe','.pt')
 except:
-    print('Usage: python exe_similarity.py <input_exe_path> <optional_output_path>')
+    print('Usage: python exe_similarity.py <input_exe_path> <optional_output_path|PRINT_RESULT>')
     exit(-1)
 
 try:
-    output_path = sys.argv[2]
+    if 'PRINT_RESULT' in sys.argv[2]:
+        output_path = None
+    else:
+        output_path = sys.argv[2] + output_name
 except:
     output_path = '/root/poc_detection/SAFETorch/SAFEtorch/' + output_name
 
@@ -98,11 +101,7 @@ safe = safe.eval()
 
 os.system('python embeddings_extractor.py ' + exe)
 
-# da cambiare per il docker container
-#/root/poc_detection/
 input_exe_embeddings_path = '/root/poc_detection/SAFETorch/SAFEtorch/input_exe_embeddings.pt'
-# input_exe_embeddings = torch.load('/home/mattia/Desktop/tesi_magistrale/SAFEtorch/SAFEtorch/input_exe_embeddings.pt')
-# os.remove('/home/mattia/Desktop/tesi_magistrale/SAFEtorch/SAFEtorch/input_exe_embeddings.pt')
 input_exe_embeddings = torch.load(input_exe_embeddings_path)
 os.remove(input_exe_embeddings_path)
 if not input_exe_embeddings:
@@ -141,4 +140,5 @@ for entry in tqdm(exploits_embeddings):
         key = entry
 print('L\'exploit con maggiore somiglianza è ' + key + ' con valore ' + str(max))
 
-torch.save(means, output_path)
+if output_path:
+    torch.save(means, output_path)
