@@ -5,6 +5,7 @@ try:
     folder = sys.argv[1]
 except:
     print('Usage: python check_folder_similarity.py <folder_path>')
+    exit(-1)
 
 ls = list(filter(lambda elem: 'exe' in elem, os.listdir(folder)))
 
