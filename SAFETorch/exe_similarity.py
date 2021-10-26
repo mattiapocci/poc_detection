@@ -65,7 +65,7 @@ def max_similarity(nome, embedding, exploit_dict, colors):
                 res = cos
                 n2 = nome2
         else: continue
-    print('Max similarity: ' + res)
+    print('Max similarity: ' + str(res))
     colors.append(n2) #function has been chosen, cannot be chosen by another embedding
     return res,nome,n2,colors
 
