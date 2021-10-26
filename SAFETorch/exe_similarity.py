@@ -133,12 +133,12 @@ for entry in tqdm(exploits_embeddings):
         #print('La max similarity tra ' + str(elem) + ' e l\'exploit ' + str(entry) + ': ' + str(cos[0]) + ' . Relativo alle funzioni ' + str(cos[1]) + ' e ' + str(cos[2]))
         acc = acc + cos[0]
         count = count + 1
-    tqdm.write('Mean similarity between input exe and ' + str(entry) + ' is ' + str(acc/count))
+    tqdm.write('Mean similarity between ' + exe.split('/')[-1] + ' and ' + str(entry) + ' is ' + str(acc/count))
     means[entry] = acc/count
     if means[entry] > max:
         max = means[entry]
         key = entry
-print('L\'exploit con maggiore somiglianza è ' + key + ' con valore ' + str(max))
+print('L\'exploit più simile a ' + exe.split('/')[-1] + ' è ' + key + ' con valore ' + str(max))
 
 if output_path:
     torch.save(means, output_path)

@@ -1,5 +1,6 @@
 import os
 import sys
+from tqdm import tqdm
 
 try:
     folder = sys.argv[1]
@@ -9,5 +10,5 @@ except:
 
 ls = list(filter(lambda elem: 'exe' in elem, os.listdir(folder)))
 
-for exe in ls:
+for exe in tqdm(ls):
     os.system('python exe_similarity.py ' + folder + exe + ' PRINT_RESULT')
