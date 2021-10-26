@@ -11,4 +11,5 @@ except:
 ls = list(filter(lambda elem: 'exe' in elem, os.listdir(folder)))
 
 for exe in tqdm(ls):
+    print('Beginning ' + exe)
     os.system('python exe_similarity.py ' + folder + exe + ' PRINT_RESULT')
