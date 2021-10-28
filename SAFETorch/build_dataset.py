@@ -3,7 +3,7 @@ import sys
 import torch
 from tqdm import tqdm
 import subprocess
-
+sys.path.append('/root/poc_detection/SAFETorch/SAFEtorch')
 os.chdir('/root/poc_detection/SAFETorch')
 folder = sys.argv[1]
 
