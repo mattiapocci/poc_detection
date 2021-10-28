@@ -2,6 +2,7 @@ import os
 import sys
 import torch
 from tqdm import tqdm
+import subprocess
 
 os.chdir('/root/poc_detection/SAFETorch')
 folder = sys.argv[1]
@@ -14,7 +15,7 @@ exploits_embeddings = {}
 for exe in tqdm(ls):
     tqdm.write('Beginning ' + exe)
     exploits_embeddings[exe.replace('.exe','')] = {}
-    os.system('python embeddings_extractor.py ' + folder + exe)
+    subprocess.run('python embeddings_extractor.py ' + folder + exe)
     exploits_embeddings[exe.replace('.exe','')] = torch.load('/root/poc_detection/SAFETorch/SAFEtorch/input_exe_embeddings.pt')
     os.remove('/root/poc_detection/SAFETorch/SAFEtorch/input_exe_embeddings.pt')
     tqdm.write('Finished ' + exe)

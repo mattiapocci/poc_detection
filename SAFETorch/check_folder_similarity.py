@@ -2,6 +2,7 @@ import os
 import sys
 from tqdm import tqdm
 import torch
+import subprocess
 
 try:
     folder = sys.argv[1]
@@ -28,8 +29,8 @@ for exe in tqdm(ls):
         print('Skipping ' + exe + ': already processed')
         continue
     print('Beginning ' + exe)
-    os.system('python exe_similarity.py ' + folder + exe + ' Malwarebazaar/')
-    os.system('python check_similarity_scores.py ' + 'Malwarebazaar/' + exe.replace('.exe','.pt'))
+    subprocess.run('python exe_similarity.py ' + folder + exe + ' Malwarebazaar/')
+    subprocess.run('python check_similarity_scores.py ' + 'Malwarebazaar/' + exe.replace('.exe','.pt'))
     already_processed.append(exe)
     torch.save(already_processed,'already_processed.pt')
     print('Finished ' + exe)

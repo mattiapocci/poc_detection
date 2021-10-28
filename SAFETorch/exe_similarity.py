@@ -45,7 +45,7 @@ import torch
 import sys
 import os
 import embeddings_extractor
-
+import subprocess
 
 def cosine_similarity(fun1,fun2):
     cos = torch.nn.CosineSimilarity(dim=1, eps=1e-6)
@@ -99,7 +99,7 @@ state_dict = torch.load(SAFE_torch_model_path)
 safe.load_state_dict(state_dict)
 safe = safe.eval()
 
-os.system('python embeddings_extractor.py ' + exe)
+subprocess.run('python embeddings_extractor.py ' + exe)
 
 input_exe_embeddings_path = '/root/poc_detection/SAFETorch/SAFEtorch/input_exe_embeddings.pt'
 input_exe_embeddings = torch.load(input_exe_embeddings_path)
