@@ -10,7 +10,7 @@ except:
     exit(-1)
 
 try:
-    threshold = int(sys.argv[2])
+    threshold = float(sys.argv[2])
 except:
     threshold = 0.8
 
