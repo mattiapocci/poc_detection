@@ -22,7 +22,9 @@ for pt in tqdm(ls):
     values = torch.load(folder + pt)
     # os.system('python exe_similarity.py ' + folder + exe + ' Malwarebazaar/')
     # os.system('python check_similarity_scores.py ' + 'Malwarebazaar/' + exe.replace('.exe','.pt'))
-    print(values)
+    for key in values:
+        if values[key] > threshold:
+            print(pt + ' has similarity ' + values[key] + ' with poc ' + key + '.')
     # already_processed.append(exe)
     # torch.save(already_processed,'already_processed.pt')
     # print('Finished ' + exe)
