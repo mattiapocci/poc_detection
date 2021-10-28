@@ -29,4 +29,4 @@ for key in d:
         if d[key][minikey].float().sum().item() == 0:
             del exploits_embeddings[key][minikey]
 
-torch.save(exploits_embeddings,'/root/poc_detection/datasets/exploits_embeddings.pt')
+torch.save(exploits_embeddings,'/root/poc_detection/datasets/exploits_embeddings_complete.pt')
