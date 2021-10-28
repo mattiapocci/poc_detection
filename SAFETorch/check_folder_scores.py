@@ -23,9 +23,9 @@ for pt in tqdm(ls):
     # os.system('python exe_similarity.py ' + folder + exe + ' Malwarebazaar/')
     # os.system('python check_similarity_scores.py ' + 'Malwarebazaar/' + exe.replace('.exe','.pt'))
     for key in values:
-        print('key: ' + key)
-        print('values[key]: ' + values[key])
-        print('threshold: ' + threshold)
+        print('key: ' + str(key))
+        print('values[key]: ' + str(values[key]))
+        print('threshold: ' + str(threshold))
         if values[key] > threshold:
             print(pt + ' has similarity ' + values[key] + ' with poc ' + key + '.')
     # already_processed.append(exe)
