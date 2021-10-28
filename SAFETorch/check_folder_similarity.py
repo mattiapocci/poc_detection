@@ -29,8 +29,8 @@ for exe in tqdm(ls):
         print('Skipping ' + exe + ': already processed')
         continue
     print('Beginning ' + exe)
-    subprocess.run('python exe_similarity.py ' + folder + exe + ' Malwarebazaar/')
-    subprocess.run('python check_similarity_scores.py ' + 'Malwarebazaar/' + exe.replace('.exe','.pt'))
+    subprocess.run('python exe_similarity.py ' + folder + exe + ' Malwarebazaar/', cwd="/root/poc_detection/SAFETorch/SAFEtorch")
+    subprocess.run('python check_similarity_scores.py ' + 'Malwarebazaar/' + exe.replace('.exe','.pt'), cwd="/root/poc_detection/SAFETorch/SAFEtorch")
     already_processed.append(exe)
     torch.save(already_processed,'already_processed.pt')
     print('Finished ' + exe)
