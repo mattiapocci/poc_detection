@@ -12,7 +12,7 @@ except:
 try:
     threshold = int(sys.argv[2])
 except:
-    threshold = 80
+    threshold = 0.8
 
 ls = list(filter(lambda elem: '.pt' in elem, os.listdir(folder)))
 
@@ -23,6 +23,9 @@ for pt in tqdm(ls):
     # os.system('python exe_similarity.py ' + folder + exe + ' Malwarebazaar/')
     # os.system('python check_similarity_scores.py ' + 'Malwarebazaar/' + exe.replace('.exe','.pt'))
     for key in values:
+        print('key: ' + key)
+        print('values[key]: ' + values[key])
+        print('threshold: ' + threshold)
         if values[key] > threshold:
             print(pt + ' has similarity ' + values[key] + ' with poc ' + key + '.')
     # already_processed.append(exe)
