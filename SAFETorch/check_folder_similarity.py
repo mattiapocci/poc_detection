@@ -29,10 +29,10 @@ for exe in tqdm(ls):
         print('Skipping ' + exe + ': already processed')
         continue
     print('Beginning ' + exe)
-    cmd = subprocess.Popen(['python', '/root/poc_detection/SAFETorch/exe_similarity.py', folder + exe, 'Malwarebazaar/'], cwd="/root/poc_detection/SAFETorch/SAFEtorch")
+    cmd = subprocess.Popen(['python', '/root/poc_detection/SAFETorch/exe_similarity.py', folder + exe, 'Malwarebazaar/'])
     cmd.communicate()
     # subprocess.run('python exe_similarity.py ' + folder + exe + ' Malwarebazaar/', cwd="/root/poc_detection/SAFETorch/SAFEtorch")
-    cmd = subprocess.Popen(['python', '/root/poc_detection/SAFETorch/check_similarity_scores.py', 'Malwarebazaar/' + exe.replace('.exe','.pt')], cwd="/root/poc_detection/SAFETorch/SAFEtorch")
+    cmd = subprocess.Popen(['python', '/root/poc_detection/SAFETorch/check_similarity_scores.py', 'Malwarebazaar/' + exe.replace('.exe','.pt')])
     cmd.communicate()
     # subprocess.run('python check_similarity_scores.py ' + 'Malwarebazaar/' + exe.replace('.exe','.pt'), cwd="/root/poc_detection/SAFETorch/SAFEtorch")
     already_processed.append(exe)
