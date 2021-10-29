@@ -14,7 +14,7 @@ exploits_embeddings = {}
 for exe in tqdm(ls):
     tqdm.write('Beginning ' + exe)
     exploits_embeddings[exe.replace('.exe','')] = {}
-    cmd = subprocess.Popen(['python', 'embeddings_extractor.py', folder + exe], cwd="/root/poc_detection/SAFETorch/SAFEtorch")
+    cmd = subprocess.Popen(['python', '/root/poc_detection/SAFETorch/embeddings_extractor.py', folder + exe], cwd="/root/poc_detection/SAFETorch/SAFEtorch")
     cmd.communicate()
     # subprocess.run('python embeddings_extractor.py ' + folder + exe, cwd="/root/poc_detection/SAFETorch/SAFEtorch")
     exploits_embeddings[exe.replace('.exe','')] = torch.load('/root/poc_detection/SAFETorch/SAFEtorch/input_exe_embeddings.pt')

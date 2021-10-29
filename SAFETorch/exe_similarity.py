@@ -98,7 +98,7 @@ normalizer = FunctionNormalizer(max_instruction=150)
 state_dict = torch.load(SAFE_torch_model_path)
 safe.load_state_dict(state_dict)
 safe = safe.eval()
-cmd = subprocess.Popen(['python', 'embeddings_extractor.py', exe], cwd="/root/poc_detection/SAFETorch/SAFEtorch")
+cmd = subprocess.Popen(['python', '/root/poc_detection/SAFETorch/embeddings_extractor.py', exe], cwd="/root/poc_detection/SAFETorch/SAFEtorch")
 cmd.communicate()
 
 # subprocess.run('python embeddings_extractor.py ' + exe, cwd="/root/poc_detection/SAFETorch/SAFEtorch")
