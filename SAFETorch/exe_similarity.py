@@ -103,7 +103,7 @@ cmd.communicate()
 
 # subprocess.run('python embeddings_extractor.py ' + exe, cwd="/root/poc_detection/SAFETorch/SAFEtorch")
 
-input_exe_embeddings_path = '/root/poc_detection/SAFETorch/SAFEtorch/input_exe_embeddings.pt'
+input_exe_embeddings_path = '/root/poc_detection/SAFETorch/SAFEtorch/' + exe.split('/')[-1].replace('.exe','.pt')
 input_exe_embeddings = torch.load(input_exe_embeddings_path)
 os.remove(input_exe_embeddings_path)
 if not input_exe_embeddings:
