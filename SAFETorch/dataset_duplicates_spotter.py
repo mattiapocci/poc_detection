@@ -1,8 +1,7 @@
 from itertools import chain
 import torch
 import os
-#da levare se docker container
-os.chdir('SAFETorch')
+
 
 dataset = torch.load('../datasets/exploits_embeddings_complete.pt')
 torch.save(dataset,'../datasets/exploits_embeddings_complete_with_duplicates.pt')
