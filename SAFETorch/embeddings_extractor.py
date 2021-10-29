@@ -49,4 +49,4 @@ try:
 except:
     pass
 
-torch.save(input_exe_embeddings,'/root/poc_detection/SAFETorch/SAFEtorch/input_exe_embeddings.pt')
+torch.save(input_exe_embeddings,'/root/poc_detection/SAFETorch/SAFEtorch/'+ exe + '.pt')
