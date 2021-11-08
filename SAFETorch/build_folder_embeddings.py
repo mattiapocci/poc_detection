@@ -10,16 +10,23 @@ folder = sys.argv[1]
 ls = list(filter(lambda elem: 'exe' in elem, os.listdir(folder)))
 
 embeddings_dict = {}
-
+i = int(sys.argv[1])
 for exe in tqdm(ls):
+    if i == 0:
+        break
     tqdm.write('Beginning ' + exe)
-    embeddings_dict[exe.replace('.exe','')] = {}
-    cmd = subprocess.Popen(['python', '/root/poc_detection/SAFETorch/embeddings_extractor.py', folder + exe], cwd="/root/poc_detection/SAFETorch/SAFEtorch")
-    cmd.communicate()
-    # subprocess.run('python embeddings_extractor.py ' + folder + exe, cwd="/root/poc_detection/SAFETorch/SAFEtorch")
-    embeddings_dict[exe.replace('.exe','')] = torch.load('/root/poc_detection/SAFETorch/SAFEtorch/' + exe.replace('.exe','.pt'))
-    os.remove('/root/poc_detection/SAFETorch/SAFEtorch/' + exe.replace('.exe','.pt'))
-    tqdm.write('Finished ' + exe)
+    try:
+        embeddings_dict[exe.replace('.exe','')] = torch.load('/root/poc_detection/SAFETorch/SAFEtorch/' + exe.replace('.exe','.pt'))
+        tqdm.write('Already processed ' + exe)
+    except:
+        embeddings_dict[exe.replace('.exe','')] = {}
+        cmd = subprocess.Popen(['python', '/root/poc_detection/SAFETorch/embeddings_extractor.py', folder + exe], cwd="/root/poc_detection/SAFETorch/SAFEtorch")
+        cmd.communicate()
+        # subprocess.run('python embeddings_extractor.py ' + folder + exe, cwd="/root/poc_detection/SAFETorch/SAFEtorch")
+        embeddings_dict[exe.replace('.exe','')] = torch.load('/root/poc_detection/SAFETorch/SAFEtorch/' + exe.replace('.exe','.pt'))
+        # os.remove('/root/poc_detection/SAFETorch/SAFEtorch/' + exe.replace('.exe','.pt'))
+        tqdm.write('Finished ' + exe)
+        i = i - 1
 
 # remove invalid entries in embeddings_dict
 from copy import deepcopy
@@ -30,4 +37,4 @@ for key in d:
         if d[key][minikey].float().sum().item() == 0:
             del embeddings_dict[key][minikey]
 
-torch.save(embeddings_dict,'/root/poc_detection/datasets/embeddings_dict_complete.pt')
+torch.save(embeddings_dict,'/root/poc_detection/datasets/embeddings_dict.pt')
