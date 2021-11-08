@@ -60,7 +60,7 @@ malware_embeddings = torch.load(malware_embeddings_path)
 
 means = {}
 for exe_hash in tqdm(malware_embeddings.keys()):    
-    print('Beginning ' + exe_hash)
+    tqdm.write('Beginning ' + exe_hash)
     means[exe_hash] = {}
     key = ''
 
@@ -77,9 +77,9 @@ for exe_hash in tqdm(malware_embeddings.keys()):
             means[exe_hash][poc] = 0
         else:
             means[exe_hash][poc] = acc/count
-    print('Saving intermediate results')
+    tqdm.write('Saving intermediate results')
     torch.save(means, output_file)
-    print('Finished ' + exe_hash)
+    tqdm.write('Finished ' + exe_hash)
 
 print('Saving results')
 torch.save(means, output_file)
