@@ -70,7 +70,7 @@ for exe_hash in tqdm(malware_embeddings.keys()):
         colors = []
 
         for embedding in tqdm(malware_embeddings[exe_hash]):
-            cos = max_similarity(embedding, malware_embeddings[exe_hash][embedding], exploits_embeddings[entry], colors)
+            cos = max_similarity(embedding, malware_embeddings[exe_hash][embedding], exploits_embeddings[entry], colors, distance_type)
             colors = cos[3]
             acc = acc + cos[0]
             count = count + 1
