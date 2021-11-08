@@ -1,0 +1,33 @@
+import os
+import sys
+import torch
+from tqdm import tqdm
+import subprocess
+os.chdir('/root/poc_detection/SAFETorch')
+folder = sys.argv[1]
+
+#pick all exes in folder
+ls = list(filter(lambda elem: 'exe' in elem, os.listdir(folder)))
+
+embeddings_dict = {}
+
+for exe in tqdm(ls):
+    tqdm.write('Beginning ' + exe)
+    embeddings_dict[exe.replace('.exe','')] = {}
+    cmd = subprocess.Popen(['python', '/root/poc_detection/SAFETorch/embeddings_extractor.py', folder + exe], cwd="/root/poc_detection/SAFETorch/SAFEtorch")
+    cmd.communicate()
+    # subprocess.run('python embeddings_extractor.py ' + folder + exe, cwd="/root/poc_detection/SAFETorch/SAFEtorch")
+    embeddings_dict[exe.replace('.exe','')] = torch.load('/root/poc_detection/SAFETorch/SAFEtorch/' + exe.replace('.exe','.pt'))
+    os.remove('/root/poc_detection/SAFETorch/SAFEtorch/' + exe.replace('.exe','.pt'))
+    tqdm.write('Finished ' + exe)
+
+# remove invalid entries in embeddings_dict
+from copy import deepcopy
+d = deepcopy(embeddings_dict)
+# Check if a tensor is zero: if my_tensor.float().sum().data[0] == 0:
+for key in d:
+    for minikey in d[key]:
+        if d[key][minikey].float().sum().item() == 0:
+            del embeddings_dict[key][minikey]
+
+torch.save(embeddings_dict,'/root/poc_detection/datasets/embeddings_dict_complete.pt')
