@@ -64,20 +64,21 @@ for exe_hash in tqdm(malware_embeddings.keys()):
     means[exe_hash] = {}
     key = ''
 
-    for entry in tqdm(exploits_embeddings.keys()):
+    for poc in tqdm(exploits_embeddings.keys()):
         count = 0
         acc = 0
         colors = []
-
-        for embedding in tqdm(malware_embeddings[exe_hash]):
-            cos = max_similarity(embedding, malware_embeddings[exe_hash][embedding], exploits_embeddings[entry], colors, distance_type)
+        for embedding_key in tqdm(malware_embeddings[exe_hash]):
+            cos = max_similarity(embedding_key, malware_embeddings[exe_hash][embedding_key], exploits_embeddings[poc], colors, distance_type)
             colors = cos[3]
             acc = acc + cos[0]
             count = count + 1
-
-        tqdm.write('Average similarity: ' + str(acc/count))
-        means[exe_hash][entry] = acc/count
-
+        if count == 0:
+            means[exe_hash][poc] = 0
+        else:
+            means[exe_hash][poc] = acc/count
+    print('Saving intermediate results')
+    torch.save(means, output_file)
     print('Finished ' + exe_hash)
 
 print('Saving results')
