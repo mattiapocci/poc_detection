@@ -10,7 +10,7 @@ folder = sys.argv[1]
 ls = list(filter(lambda elem: 'exe' in elem, os.listdir(folder)))
 
 embeddings_dict = {}
-i = int(sys.argv[1])
+i = int(sys.argv[2])
 for exe in tqdm(ls):
     if i == 0:
         break
