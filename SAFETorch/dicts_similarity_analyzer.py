@@ -1,12 +1,11 @@
 import torch
-import os
 import sys
 from tqdm import tqdm
 try:
     means_path = sys.argv[1]
 except:
     print("Usage: python dicts_similarity_analyzer.py <path_to_means_file> <optional_threshold>")
-    os.exit(-1)
+    exit(-1)
 
 try:
     threshold = float(sys.argv[2])
