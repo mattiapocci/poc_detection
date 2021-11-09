@@ -33,10 +33,11 @@ for exe in tqdm(ls):
 from copy import deepcopy
 d = deepcopy(embeddings_dict)
 # Check if a tensor is zero: if my_tensor.float().sum().data[0] == 0:
-for key in tqdm[d]:
-    tqdm.write('Checking ' + key + ' for duplicates')
-    for minikey in d[key]:
-        if d[key][minikey].float().sum().item() == 0:
-            del embeddings_dict[key][minikey]
+for exe in tqdm[d]:
+    for key in tqdm[d[exe]]:
+        tqdm.write('Checking ' + key + ' for duplicates')
+        for minikey in d[exe][key]:
+            if d[exe][key][minikey].float().sum().item() == 0:
+                del embeddings_dict[exe][key][minikey]
 
 torch.save(embeddings_dict,'/root/poc_detection/datasets/embeddings_dict.pt')
