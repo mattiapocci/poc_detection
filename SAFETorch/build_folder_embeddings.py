@@ -29,15 +29,15 @@ for exe in tqdm(ls):
         torch.save(embeddings_dict,'/root/poc_detection/datasets/embeddings_dict.pt')
         i = i - 1
 
-# remove invalid entries in embeddings_dict
-from copy import deepcopy
-d = deepcopy(embeddings_dict)
-# Check if a tensor is zero: if my_tensor.float().sum().data[0] == 0:
-for exe in tqdm[d]:
-    for key in tqdm[d[exe]]:
-        tqdm.write('Checking ' + key + ' for duplicates')
-        for minikey in d[exe][key]:
-            if d[exe][key][minikey].float().sum().item() == 0:
-                del embeddings_dict[exe][key][minikey]
+# # remove invalid entries in embeddings_dict
+# from copy import deepcopy
+# d = deepcopy(embeddings_dict)
+# # Check if a tensor is zero: if my_tensor.float().sum().data[0] == 0:
+# for exe in tqdm[d]:
+#     for key in tqdm[d[exe]]:
+#         tqdm.write('Checking ' + key + ' for duplicates')
+#         for minikey in d[exe][key]:
+#             if d[exe][key][minikey].float().sum().item() == 0:
+#                 del embeddings_dict[exe][key][minikey]
 
 torch.save(embeddings_dict,'/root/poc_detection/datasets/embeddings_dict.pt')
