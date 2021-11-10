@@ -13,3 +13,5 @@ SAFETorch/radare2
 radare2/
 SAFETorch/list_expid_cves.txt
 SAFETorch/Malwarebazaar/
+Scrapers/source/
+Scrapers/*.pt
