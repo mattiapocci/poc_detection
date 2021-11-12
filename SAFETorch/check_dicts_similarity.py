@@ -54,13 +54,18 @@ try:
 except:
     print('Usage: python check_dicts_similarity.py <exploits_embeddings_path> <malware_embeddings_path> <output_file> <COSINE/EUCLIDEAN>')
     exit(-1)
-
+#cwd = os.getcwd()
 exploits_embeddings = torch.load(exploits_embeddings_path)
 malware_embeddings = torch.load(malware_embeddings_path)
-
-means = {}
+try:
+    means = torch.load(sys.argv[3])
+except:
+    means = {}
 for exe_hash in tqdm(malware_embeddings.keys()):    
     tqdm.write('Beginning ' + exe_hash)
+    if exe_hash in means.keys():
+        print('Already calculated')
+        continue
     means[exe_hash] = {}
     key = ''
 
