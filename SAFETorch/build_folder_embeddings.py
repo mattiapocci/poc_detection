@@ -5,7 +5,7 @@ from tqdm import tqdm
 import subprocess
 os.chdir('/root/poc_detection/SAFETorch')
 folder = sys.argv[1]
-output_file = sys.argv[2]
+output_file = sys.argv[3]
 #pick all exes in folder
 ls = list(filter(lambda elem: 'exe' in elem, os.listdir(folder)))
 
