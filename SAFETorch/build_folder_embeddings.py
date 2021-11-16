@@ -5,7 +5,7 @@ from tqdm import tqdm
 import subprocess
 os.chdir('/root/poc_detection/SAFETorch')
 folder = sys.argv[1]
-
+output_file = sys.argv[2]
 #pick all exes in folder
 ls = list(filter(lambda elem: 'exe' in elem, os.listdir(folder)))
 
@@ -26,7 +26,7 @@ for exe in tqdm(ls):
         embeddings_dict[exe.replace('.exe','')] = torch.load('/root/poc_detection/SAFETorch/SAFEtorch/' + exe.replace('.exe','.pt'))
         # os.remove('/root/poc_detection/SAFETorch/SAFEtorch/' + exe.replace('.exe','.pt'))
         tqdm.write('Finished ' + exe + '. Updating dict at /root/poc_detection/datasets/embeddings_dict.pt')
-        torch.save(embeddings_dict,'/root/poc_detection/datasets/embeddings_dict.pt')
+        torch.save(embeddings_dict,output_file)
         i = i - 1
 
 # # remove invalid entries in embeddings_dict
@@ -40,4 +40,4 @@ for exe in tqdm(ls):
 #             if d[exe][key][minikey].float().sum().item() == 0:
 #                 del embeddings_dict[exe][key][minikey]
 
-torch.save(embeddings_dict,'/root/poc_detection/datasets/embeddings_dict.pt')
+torch.save(embeddings_dict,output_file)
