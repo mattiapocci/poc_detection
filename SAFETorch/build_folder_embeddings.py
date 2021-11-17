@@ -25,7 +25,7 @@ for exe in tqdm(ls):
         # subprocess.run('python embeddings_extractor.py ' + folder + exe, cwd="/root/poc_detection/SAFETorch/SAFEtorch")
         embeddings_dict[exe.replace('.exe','')] = torch.load('/root/poc_detection/SAFETorch/SAFEtorch/' + exe.replace('.exe','.pt'))
         # os.remove('/root/poc_detection/SAFETorch/SAFEtorch/' + exe.replace('.exe','.pt'))
-        tqdm.write('Finished ' + exe + '. Updating dict at /root/poc_detection/datasets/embeddings_dict.pt')
+        tqdm.write('Finished ' + exe + '. Updating dict at ' + output_file)
         torch.save(embeddings_dict,output_file)
         i = i - 1
 
