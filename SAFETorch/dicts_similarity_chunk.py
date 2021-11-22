@@ -40,43 +40,63 @@ def max_similarity(nome, embedding, exploit_dict, distance_type):
 try:
     exploits_embeddings_path = sys.argv[1]
 except:
-    print('Usage: python check_dicts_similarity.py <exploits_embeddings_path> <malware_embeddings_path> <output_file> <COSINE/EUCLIDEAN>')
+    print('Usage: python check_dicts_similarity.py <exploits_embeddings_path> <malware_embeddings_path> <output_file> <COSINE/EUCLIDEAN> <first_index> <last_index>')
     exit(-1)
 
 try:
     malware_embeddings_path = sys.argv[2]
 except:
-    print('Usage: python check_dicts_similarity.py <exploits_embeddings_path> <malware_embeddings_path> <output_file> <COSINE/EUCLIDEAN>')
+    print('Usage: python check_dicts_similarity.py <exploits_embeddings_path> <malware_embeddings_path> <output_file> <COSINE/EUCLIDEAN> <first_index> <last_index>')
     exit(-1)
 
 try:
     output_file = sys.argv[3]
 except:
-    print('Usage: python check_dicts_similarity.py <exploits_embeddings_path> <malware_embeddings_path> <output_file> <COSINE/EUCLIDEAN>')
+    print('Usage: python check_dicts_similarity.py <exploits_embeddings_path> <malware_embeddings_path> <output_file> <COSINE/EUCLIDEAN> <first_index> <last_index>')
     exit(-1)
 try:
     distance_type = sys.argv[4].upper()
 except:
-    print('Usage: python check_dicts_similarity.py <exploits_embeddings_path> <malware_embeddings_path> <output_file> <COSINE/EUCLIDEAN>')
+    print('Usage: python check_dicts_similarity.py <exploits_embeddings_path> <malware_embeddings_path> <output_file> <COSINE/EUCLIDEAN> <first_index> <last_index>')
     exit(-1)
-cwd = os.getcwd()
+
+try:
+    first_index = int(sys.argv[5])
+except:
+    print('Usage: python check_dicts_similarity.py <exploits_embeddings_path> <malware_embeddings_path> <output_file> <COSINE/EUCLIDEAN> <first_index> <last_index>')
+    exit(-1)
+
+try:
+    last_index = int(sys.argv[6])
+except:
+    print('Usage: python check_dicts_similarity.py <exploits_embeddings_path> <malware_embeddings_path> <output_file> <COSINE/EUCLIDEAN> <first_index> <last_index>')
+    exit(-1)
+#cwd = os.getcwd()
+
+
 exploits_embeddings = torch.load(exploits_embeddings_path)
 malware_embeddings = torch.load(malware_embeddings_path)
 try:
     means = torch.load(sys.argv[3])
 except:
     means = {}
-for exe_hash in tqdm(malware_embeddings.keys()):    
+
+hashlist = list(malware_embeddings.keys())
+i = first_index
+pbar = tqdm(total=last_index-first_index)
+while i < last_index:
+    exe_hash = hashlist[i]
+#for exe_hash in tqdm(malware_embeddings.keys()):    
     tqdm.write('Beginning ' + exe_hash)
     if exe_hash in means.keys():
-        print('Already calculated')
+        tqdm.write('Already calculated')
+        i += 1
+        pbar.update(1)
         continue
     means[exe_hash] = {}
     key = ''
 
     for poc in tqdm(exploits_embeddings.keys()):
-        # if not ('CVE-2006-7210' in poc):
-        #     continue
         count = 0
         acc = 0
         # colors = []
@@ -97,6 +117,7 @@ for exe_hash in tqdm(malware_embeddings.keys()):
     tqdm.write('Saving intermediate results')
     torch.save(means, output_file)
     tqdm.write('Finished ' + exe_hash)
-
+    i += 1
+    pbar.update(1)
 print('Saving results')
 torch.save(means, output_file)
