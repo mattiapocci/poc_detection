@@ -1,0 +1,246 @@
+id,file,description,date,author,type,platform,port,language
+9,exploits/windows/dos/9.c,Apache 2.x - Memory Leak,1970-01-01,Matthew Murphy,dos,windows,,c
+35,exploits/windows/dos/35.c,Microsoft IIS 5.0 < 5.1 - Remote Denial of Service,1970-01-01,Shachank,dos,windows,,c
+65,exploits/windows/dos/65.c,Microsoft Windows SQL Server - Remote Denial of Service (MS03-031),1970-01-01,refdom,dos,windows,,c
+403,exploits/windows/dos/403.c,IPD (Integrity Protection Driver) - Denial of Service,1970-01-01,anonymous,dos,windows,,c
+427,exploits/windows/dos/427.c,WFTPD Pro Server 3.21 - MLST Remote Denial of Service,1970-01-01,lion,dos,windows,,c
+428,exploits/windows/dos/428.c,CesarFTP Server - Long Command Denial of Service,1970-01-01,lion,dos,windows,,c
+978,exploits/windows/dos/978.cpp,Ashley's Web Server - Denial of Service,1970-01-01,basher13,dos,windows,,cpp
+988,exploits/windows/dos/988.cpp,Remote File Manager 1.0 - Denial of Service,1970-01-01,basher13,dos,windows,,cpp
+1027,exploits/windows/dos/1027.c,FutureSoft TFTP Server 2000 - Remote Denial of Service,1970-01-01,ATmaCA,dos,windows,,c
+1101,exploits/windows/dos/1101.c,SoftiaCom wMailServer 1.0 - Remote Denial of Service,1970-01-01,Kozan,dos,windows,,c
+1116,exploits/windows/dos/1116.c,Microsoft Windows - Color Management Module Overflow (MS05-036) (1),1970-01-01,snooq,dos,windows,,c
+1199,exploits/windows/dos/1199.c,BNBT BitTorrent EasyTracker 7.7r3 - Denial of Service,1970-01-01,Sowhat,dos,windows,,c
+1218,exploits/windows/dos/1218.c,Stoney FTPd - 'rxBot mods ftpd' Denial of Service,1970-01-01,D-oNe,dos,windows,,c
+1339,exploits/windows/dos/1339.c,freeFTPd 1.0.10 - 'PORT' Denial of Service,1970-01-01,Stefan Lochbihler,dos,windows,,c
+1343,exploits/windows/dos/1343.c,Microsoft Windows Metafile - 'gdi32.dll' Denial of Service (MS05-053),1970-01-01,Winny Thomas,dos,windows,,c
+1346,exploits/windows/dos/1346.c,Microsoft Windows Metafile - 'mtNoObjects' Denial of Service (MS05-053),1970-01-01,Winny Thomas,dos,windows,,c
+1371,exploits/windows/dos/1371.c,Macromedia Flash Media Server 2 - Remote Denial of Service,1970-01-01,Kozan,dos,windows,,c
+1500,exploits/windows/dos/1500.cpp,Microsoft Windows Media Player 7.1 < 10 - '.BMP' Heap Overflow (PoC) (MS06-005) (1),1970-01-01,ATmaCA,dos,windows,,cpp
+1633,exploits/windows/dos/1633.c,Total Commander 6.x - 'unacev2.dll' Buffer Overflow (PoC),1970-01-01,darkeagle,dos,windows,,c
+1935,exploits/windows/dos/1935.cpp,Winamp 5.21 - '.Midi' File Header Handling Buffer Overflow (PoC),1970-01-01,BassReFLeX,dos,windows,,cpp
+2001,exploits/windows/dos/2001.c,Microsoft Word 2000/2003 - Unchecked Boundary Condition,1970-01-01,naveed afzal,dos,windows,,c
+2037,exploits/windows/dos/2037.c,Dumb 0.9.3 - 'it_read_envelope' Remote Heap Overflow (PoC),1970-01-01,Luigi Auriemma,dos,windows,,c
+2204,exploits/windows/dos/2204.c,Microsoft Windows - '.png' IHDR Block Denial of Service (PoC) (3),1970-01-01,Preddy,dos,windows,,c
+2210,exploits/windows/dos/2210.c,Microsoft Windows - '.png' IHDR Block Denial of Service (PoC) (2),1970-01-01,vegas78,dos,windows,,c
+2625,exploits/windows/dos/2625.c,QK SMTP 3.01 - 'RCPT TO' Remote Denial of Service,1970-01-01,Greg Linares,dos,windows,,c
+2650,exploits/windows/dos/2650.c,RevilloC MailServer 1.x - 'RCPT TO' Remote Denial of Service,1970-01-01,Greg Linares,dos,windows,,c
+2860,exploits/windows/dos/2860.c,Quintessential Player 4.50.1.82 - Playlist Denial of Service (PoC),1970-01-01,Greg Linares,dos,windows,,c
+2861,exploits/windows/dos/2861.c,Songbird Media Player 0.2 - Format String Denial of Service (PoC),1970-01-01,Greg Linares,dos,windows,,c
+3126,exploits/windows/dos/3126.c,WFTPD Pro Server 3.25 - Site ADMN Remote Denial of Service,1970-01-01,Marsu,dos,windows,,c
+3127,exploits/windows/dos/3127.c,KarjaSoft Sami FTP Server 2.0.2 - USER/PASS Remote Buffer Overflow (PoC),1970-01-01,Marsu,dos,windows,,c
+3128,exploits/windows/dos/3128.c,BolinTech DreamFTP Server - 'USER' Remote Buffer Overflow (PoC),1970-01-01,Marsu,dos,windows,,c
+3204,exploits/windows/dos/3204.c,Citrix Metaframe Presentation Server Print Provider - Buffer Overflow (PoC),1970-01-01,Andres Tarasco,dos,windows,,c
+3277,exploits/windows/dos/3277.cpp,SmartFTP Client 2.0.1002 - Remote Heap Overflow Denial of Service,1970-01-01,Marsu,dos,windows,,cpp
+3341,exploits/windows/dos/3341.cpp,TurboFTP Server 5.30 Build 572 - 'newline/LIST' Multiple Remote Denial of Service Vulnerabilities,1970-01-01,Marsu,dos,windows,,cpp
+3343,exploits/windows/dos/3343.cpp,FTP Voyager 14.0.0.3 - 'CWD' Remote Stack Overflow (PoC),1970-01-01,Marsu,dos,windows,,cpp
+3347,exploits/windows/dos/3347.cpp,FTP Explorer 1.0.1 Build 047 - Remote CPU Consumption (Denial of Service),1970-01-01,Marsu,dos,windows,,cpp
+3464,exploits/windows/dos/3464.cpp,News Bin Pro 4.32 - Article Grabbing Remote Unicode Buffer Overflow,1970-01-01,Marsu,dos,windows,,cpp
+3547,exploits/windows/dos/3547.c,0irc-client 1345 build20060823 - Denial of Service,1970-01-01,DiGitalX,dos,windows,,c
+3684,exploits/windows/dos/3684.c,Microsoft Windows Explorer - '.ANI' File Denial of Service,1970-01-01,Marsu,dos,windows,,c
+4017,exploits/windows/dos/4017.cpp,Acoustica MP3 CD Burner 4.32 - Local Buffer Overflow (PoC),1970-01-01,n00b,dos,windows,,cpp
+4288,exploits/windows/dos/4288.c,Wireshark < 0.99.6 - Mms Remote Denial of Service,1970-01-01,ZwelL,dos,windows,,c
+5142,exploits/windows/dos/5142.c,DESlock+ < 3.2.6 - 'DLMFENC.sys' Local Kernel Ring0 link list zero (PoC),1970-01-01,mu-b,dos,windows,,c
+5354,exploits/windows/dos/5354.c,Xitami Web Server 2.5c2 - LRWP Processing Format String (PoC),1970-01-01,bratax,dos,windows,,c
+6497,exploits/windows/dos/6497.c,DESlock+ < 3.2.7 - Local Kernel Race Condition Denial of Service (PoC),1970-01-01,mu-b,dos,windows,,c
+8180,exploits/windows/dos/8180.c,eZip Wizard 3.0 - Local Stack Buffer Overflow (PoC) (SEH),1970-01-01,fl0 fl0w,dos,windows,,c
+8335,exploits/windows/dos/8335.c,DeepBurner 1.9.0.228 - Stack Buffer Overflow (SEH) (PoC),1970-01-01,fl0 fl0w,dos,windows,,c
+8390,exploits/windows/dos/8390.cpp,Xilisoft Video Converter Wizard 3 - '.cue' Stack Buffer Overflow (PoC),1970-01-01,fl0 fl0w,dos,windows,,cpp
+8452,exploits/windows/dos/8452.c,Elecard AVC HD Player - '.XPL' Stack Buffer Overflow (SEH) (PoC),1970-01-01,fl0 fl0w,dos,windows,,c
+8767,exploits/windows/dos/8767.c,Winamp 5.551 - MAKI Parsing Integer Overflow (PoC),1970-01-01,n00b,dos,windows,,c
+9222,exploits/windows/dos/9222.cpp,FlyHelp - '.CHM' Local Buffer Overflow (PoC),1970-01-01,fl0 fl0w,dos,windows,,cpp
+10164,exploits/windows/dos/10164.c,Kaspersky AV 2010 9.0.0.463 - Local Denial of Service,1970-01-01,Heurs,dos,windows,,c
+10603,exploits/windows/dos/10603.c,Allied Telesyn TFTP (AT-TFTP) Server/Daemon 1.9 - Denial of Service,1970-01-01,Socket_0x03,dos,windows,,c
+11149,exploits/windows/dos/11149.c,Sub Station Alpha 4.08 - '.rt' Local Buffer Overflow (PoC),1970-01-01,fl0 fl0w,dos,windows,,c
+11392,exploits/windows/dos/11392.c,RadASM 2.2.1.6 - '.rap' Local Buffer Overflow (PoC),1970-01-01,fl0 fl0w,dos,windows,,c
+12578,exploits/windows/dos/12578.c,Adobe Shockwave Player 11.5.6.606 - 'DIR' Multiple Memory Vulnerabilities,1970-01-01,LiquidWorm,dos,windows,,c
+13887,exploits/windows/dos/13887.c,Winplot 2010 - Buffer Overflow (PoC),1970-01-01,fl0 fl0w,dos,windows,,c
+13919,exploits/windows/dos/13919.c,Corel VideoStudio Pro X3 - '.mp4' Buffer Overflow,1970-01-01,fl0 fl0w,dos,windows,,c
+13921,exploits/windows/dos/13921.c,PowerZip 7.21 (Build 4010) - Stack Buffer Overflow,1970-01-01,fl0 fl0w,dos,windows,,c
+15383,exploits/windows/dos/15383.c,Rising - 'RSNTGDI.sys' Local Denial of Service,1970-01-01,ze0r,dos,windows,,c
+15384,exploits/windows/dos/15384.c,AVG Internet Security 9.0.851 - Local Denial of Service,1970-01-01,Nikita Tarakanov,dos,windows,,c
+15420,exploits/windows/dos/15420.c,Avast! Internet Security - aswtdi.sys Local Denial of Service (PoC),1970-01-01,Nikita Tarakanov,dos,windows,,c
+16021,exploits/windows/dos/16021.c,Look n stop - Local Denial of Service,1970-01-01,Heurs,dos,windows,,c
+16022,exploits/windows/dos/16022.c,Panda Global Protection 2010 - Local Denial of Service,1970-01-01,Heurs,dos,windows,,c
+17133,exploits/windows/dos/17133.c,Microsoft Windows XP - 'afd.sys' Local Kernel Denial of Service,1970-01-01,Lufeng Li,dos,windows,,c
+17273,exploits/windows/dos/17273.c,Symantec Backup Exec System Recovery 8.5 - Kernel Pointers Dereferences,1970-01-01,Stefan LE BERRE,dos,windows,,c
+19034,exploits/windows/dos/19034.cpp,PEamp - '.mp3' Memory Corruption (PoC),1970-01-01,Ayrbyte,dos,windows,,cpp
+20784,exploits/windows/dos/20784.cpp,Wireshark 1.6.0/1.8.2 - Buffer Overflow (PoC),1970-01-01,X-h4ck,dos,windows,,cpp
+29164,exploits/windows/dos/29164.cpp,FortKnox Personal Firewall 9.0.305.0/10.0.305.0 - Kernel Driver 'fortknoxfw.sys' Memory Corruption,1970-01-01,Arash Allebrahim,dos,windows,,cpp
+29307,exploits/windows/dos/29307.c,SoftMaker Office 2012 - TextMaker Memory Corruption,1970-01-01,Arash Allebrahim,dos,windows,,c
+29949,exploits/windows/dos/29949.c,Zoo 2.10 - .ZOO Compression Algorithm Remote Denial of Service,1970-01-01,Jean-SÃ©bastien,dos,windows,,c
+35842,exploits/windows/dos/35842.c,Malwarebytes Anti-Exploit 1.03.1.1220/1.04.1.1012 - Out-of-Bounds Read Denial of Service,1970-01-01,Parvez Anwar,dos,windows,,c
+39915,exploits/windows/dos/39915.c,Armadito Antimalware - Backdoor Access/Bypass,1970-01-01,Ax.,dos,windows,,c
+40745,exploits/windows/dos/40745.c,Microsoft Windows Kernel - 'win32k' Denial of Service (MS16-135),1970-01-01,TinySec,dos,windows,,c
+41734,exploits/windows/dos/41734.c,Microsoft Visual Studio 2015 update 3 - Denial of Service,1970-01-01,Peter Baris,dos,windows,,c
+42140,exploits/windows/dos/42140.c,VMware Workstation 12 Pro - Denial of Service,1970-01-01,Borja Merino,dos,windows,,c
+42338,exploits/windows/dos/42338.cpp,Microsoft Windows Kernel - 'IOCTL 0x120007 NsiGetParameter' nsiproxy/netio Pool Memory Disclosure,1970-01-01,Google Security Research,dos,windows,,cpp
+42743,exploits/windows/dos/42743.cpp,Microsoft Windows Kernel - 'nt!NtSetIoCompletion / nt!NtRemoveIoCompletion' Pool Memory Disclosure,1970-01-01,Google Security Research,dos,windows,,cpp
+43058,exploits/windows/dos/43058.c,Watchdog Development Anti-Malware / Online Security Pro - NULL Pointer Dereference,1970-01-01,Parvez Anwar,dos,windows,,c
+44460,exploits/windows/dos/44460.cpp,Microsoft Windows - 'nt!NtQueryVolumeInformationFile' Kernel Stack Memory Disclosure,1970-01-01,Google Security Research,dos,windows,,cpp
+44462,exploits/windows/dos/44462.cpp,Microsoft Windows - 'nt!NtQueryInformationTransactionManager (TransactionManagerRecoveryInformation)' Kernel Pool Memory Disclosure,1970-01-01,Google Security Research,dos,windows,,cpp
+44463,exploits/windows/dos/44463.cpp,Microsoft Windows - 'nt!NtQueryInformationProcess (ProcessImageFileName)' Kernel 64-bit Pool/Stack Memory Disclosure,1970-01-01,Google Security Research,dos,windows,,cpp
+44610,exploits/windows/dos/44610.c,Dell Touchpad - 'ApMsgFwd.exe' Denial of Service,1970-01-01,Souhail Hammou,dos,windows,,c
+172,exploits/windows/local/172.c,FirstClass Desktop 7.1 - Local Buffer Overflow,1970-01-01,I2S-LaB,local,windows,,c
+353,exploits/windows/local/353.c,Microsoft Windows Task Scheduler (XP/2000) - '.job' (MS04-022),1970-01-01,anonymous,local,windows,,c
+368,exploits/windows/local/368.c,Microsoft Windows XP - Task Scheduler '.job' Universal (MS04-022),1970-01-01,houseofdabus,local,windows,,c
+388,exploits/windows/local/388.c,OllyDbg 1.10 - Format String,1970-01-01,Ahmet Cihan,local,windows,,c
+559,exploits/windows/local/559.c,Zinf Audio Player 2.2.1 - Local Buffer Overflow,1970-01-01,Delikon,local,windows,,c
+694,exploits/windows/local/694.c,WinRAR 3.4.1 - Corrupt '.ZIP' File,1970-01-01,Vafa Khoshaein,local,windows,,c
+769,exploits/windows/local/769.c,Funduc Search and Replace - Compressed File Local Buffer Overflow,1970-01-01,ATmaCA,local,windows,,c
+927,exploits/windows/local/927.c,Microsoft Jet Database - 'msjet40.dll' DB File Buffer Overflow,1970-01-01,Stuart Pearson,local,windows,,c
+938,exploits/windows/local/938.cpp,Microsoft Windows - 'HTA' Script Execution (MS05-016),1970-01-01,ZwelL,local,windows,,cpp
+1034,exploits/windows/local/1034.cpp,WinZip 8.1 - Command Line Local Buffer Overflow,1970-01-01,ATmaCA,local,windows,,cpp
+1128,exploits/windows/local/1128.c,Microsoft Windows - 'LegitCheckControl.dll' Genuine Advantage Validation Patch,1970-01-01,HaCkZaTaN,local,windows,,c
+1168,exploits/windows/local/1168.c,WinAce 2.6.0.5 - Temporary File Parsing Buffer Overflow,1970-01-01,ATmaCA,local,windows,,c
+1403,exploits/windows/local/1403.c,WinRAR 3.30 - 'Filename' Local Buffer Overflow (1),1970-01-01,K4P0,local,windows,,c
+1490,exploits/windows/local/1490.c,Microsoft HTML Help Workshop - '.hhp' Local Buffer Overflow (2),1970-01-01,k3xji,local,windows,,c
+1555,exploits/windows/local/1555.c,Microsoft Visual Studio 6.0 sp6 - '.dbp' Local Buffer Overflow,1970-01-01,Kozan,local,windows,,c
+2065,exploits/windows/local/2065.c,Cheese Tracker 0.9.9 - Local Buffer Overflow,1970-01-01,Luigi Auriemma,local,windows,,c
+2094,exploits/windows/local/2094.c,Open Cubic Player 2.6.0pre6/0.1.10_rc5 - Multiple Local Buffer Overflows,1970-01-01,Luigi Auriemma,local,windows,,c
+2278,exploits/windows/local/2278.cpp,ZipCentral 4.01 - '.ZIP' File Handling Local Buffer Overflow,1970-01-01,bratax,local,windows,,cpp
+2284,exploits/windows/local/2284.c,TIBCO Rendezvous 7.4.11 - Password Extractor,1970-01-01,Andres Tarasco,local,windows,,c
+2286,exploits/windows/local/2286.cpp,PowerZip 7.06.38950 - 'Filename Handling' Local Buffer Overflow,1970-01-01,bratax,local,windows,,cpp
+2412,exploits/windows/local/2412.c,Microsoft Windows Kernel - Local Privilege Escalation (MS06-049),1970-01-01,SoBeIt,local,windows,,c
+2815,exploits/windows/local/2815.c,XMPlay 3.3.0.4 - '.M3U' Filename Local Buffer Overflow,1970-01-01,Greg Linares,local,windows,,c
+2821,exploits/windows/local/2821.c,XMPlay 3.3.0.4 - '.PLS' Local Buffer Overflow,1970-01-01,Greg Linares,local,windows,,c
+2824,exploits/windows/local/2824.c,XMPlay 3.3.0.4 - '.ASX' Filename Local Buffer Overflow,1970-01-01,Greg Linares,local,windows,,c
+2873,exploits/windows/local/2873.c,AtomixMP3 < 2.3 - '.m3u' Local Buffer Overflow,1970-01-01,Greg Linares,local,windows,,c
+2880,exploits/windows/local/2880.c,BlazeVideo HDTV Player 2.1 - '.PLF' Local Buffer Overflow,1970-01-01,Greg Linares,local,windows,,c
+3149,exploits/windows/local/3149.cpp,Microsoft Help Workshop 4.03.0002 - '.cnt' Local Buffer Overflow,1970-01-01,porkythepig,local,windows,,cpp
+3159,exploits/windows/local/3159.cpp,Microsoft Help Workshop 4.03.0002 - '.HPJ' Local Buffer Overflow,1970-01-01,porkythepig,local,windows,,cpp
+3176,exploits/windows/local/3176.cpp,Microsoft Visual C++ - '.RC Resource Files' Local Buffer Overflow,1970-01-01,porkythepig,local,windows,,cpp
+3220,exploits/windows/local/3220.c,Multiple Printer Providers (Spooler Service) - Local Privilege Escalation,1970-01-01,Andres Tarasco,local,windows,,c
+3342,exploits/windows/local/3342.c,News Rover 12.1 Rev 1 - Stack Overflow (1),1970-01-01,Marsu,local,windows,,c
+3349,exploits/windows/local/3349.c,News Bin Pro 5.33 - '.nbi' Local Buffer Overflow,1970-01-01,Marsu,local,windows,,c
+3593,exploits/windows/local/3593.c,Corel WordPerfect X3 13.0.0.565 - '.prs' Local Buffer Overflow,1970-01-01,Jonathan So,local,windows,,c
+3617,exploits/windows/local/3617.cpp,Microsoft Windows - Animated Cursor '.ani' Local Stack Overflow,1970-01-01,devcode,local,windows,,cpp
+3647,exploits/windows/local/3647.c,Microsoft Windows - Animated Cursor '.ani' Local Buffer Overflow,1970-01-01,Marsu,local,windows,,c
+3648,exploits/windows/local/3648.c,IrfanView 3.99 - '.ani' Local Buffer Overflow (1),1970-01-01,Marsu,local,windows,,c
+3649,exploits/windows/local/3649.c,Ipswitch WS_FTP 5.05 - Server Manager Local Site Buffer Overflow,1970-01-01,Marsu,local,windows,,c
+3772,exploits/windows/local/3772.c,PhotoFiltre Studio 8.1.1 - '.tif' Local Buffer Overflow,1970-01-01,Marsu,local,windows,,c
+3776,exploits/windows/local/3776.c,ACDSee 9.0 - '.xpm' Local Buffer Overflow,1970-01-01,Marsu,local,windows,,c
+3777,exploits/windows/local/3777.c,XnView 1.90.3 - '.xpm' Local Buffer Overflow,1970-01-01,Marsu,local,windows,,c
+3779,exploits/windows/local/3779.c,Corel Paint Shop Pro Photo 11.20 - '.clp' Local Buffer Overflow,1970-01-01,Marsu,local,windows,,c
+3793,exploits/windows/local/3793.c,Adobe Photoshop CS2 / CS3 - '.bmp' Local Buffer Overflow,1970-01-01,Marsu,local,windows,,c
+3801,exploits/windows/local/3801.c,GIMP 2.2.14 - '.ras' SUNRAS Plugin Buffer Overflow,1970-01-01,Marsu,local,windows,,c
+3812,exploits/windows/local/3812.c,Photoshop CS2/CS3 / Paint Shop Pro 11.20 - '.png' Local Buffer Overflow,1970-01-01,Marsu,local,windows,,c
+3823,exploits/windows/local/3823.c,Winamp 5.34 - '.mp4' Code Execution,1970-01-01,Marsu,local,windows,,c
+3897,exploits/windows/local/3897.c,eTrust AntiVirus Agent r8 - Local Privilege Escalation,1970-01-01,binagres,local,windows,,c
+4001,exploits/windows/local/4001.cpp,UltraISO 8.6.2.2011 - '.cue/'.bin' Local Buffer Overflow (1),1970-01-01,n00b,local,windows,,cpp
+4263,exploits/windows/local/4263.cpp,Live for Speed S1/S2/Demo - '.spr' Local Buffer Overflow,1970-01-01,n00b,local,windows,,cpp
+4584,exploits/windows/local/4584.c,Kodak Image Viewer - TIF/TIFF Code Execution (MS07-055),1970-01-01,Gil-Dong / Woo-Chi,local,windows,,c
+4749,exploits/windows/local/4749.c,Rosoft Media Player 4.1.7 - '.m3u' Local Stack Overflow,1970-01-01,devcode,local,windows,,c
+4998,exploits/windows/local/4998.c,IrfanView 4.10 - '.fpx' Memory Corruption,1970-01-01,Marsu,local,windows,,c
+5032,exploits/windows/local/5032.c,Total Video Player 1.03 - '.m3u' File Local Buffer Overflow,1970-01-01,fl0 fl0w,local,windows,,c
+5077,exploits/windows/local/5077.cpp,Total Video Player 1.20 - '.m3u' File Local Stack Buffer Overflow,1970-01-01,fl0 fl0w,local,windows,,cpp
+5107,exploits/windows/local/5107.c,Microsoft Office 2003 - '.wps' Local Stack Overflow (MS08-011),1970-01-01,chujwamwdupe,local,windows,,c
+5141,exploits/windows/local/5141.c,DESlock+ < 3.2.6 - 'LIST' Local Kernel Memory Leak,1970-01-01,mu-b,local,windows,,c
+5951,exploits/windows/local/5951.c,XnView 1.93.6 - '.taac' Local Buffer Overflow,1970-01-01,Shinnok,local,windows,,c
+6039,exploits/windows/local/6039.c,Download Accelerator Plus DAP 8.x - '.m3u' File Buffer Overflow,1970-01-01,Shinnok,local,windows,,c
+6188,exploits/windows/local/6188.c,IrfanView 3.99 - '.IFF' File Local Stack Buffer Overflow,1970-01-01,fl0 fl0w,local,windows,,c
+6389,exploits/windows/local/6389.cpp,Numark Cue 5.0 rev 2 - '.m3u' File Local Stack Buffer Overflow,1970-01-01,fl0 fl0w,local,windows,,cpp
+6831,exploits/windows/local/6831.cpp,TugZip 3.00 Archiver - '.zip' Local Buffer Overflow,1970-01-01,fl0 fl0w,local,windows,,cpp
+40988,exploits/windows/local/40988.c,Kaspersky 17.0.0 - Local CA Root Incorrectly Protected,1970-01-01,Google Security Research,local,windows,,c
+7536,exploits/windows/local/7536.cpp,CoolPlayer 2.19 - '.Skin' Local Buffer Overflow,1970-01-01,r0ut3r,local,windows,,cpp
+7702,exploits/windows/local/7702.c,GOM Player 2.0.12.3375 - '.asx' Local Stack Overflow,1970-01-01,DATA_SNIPER,local,windows,,c
+7843,exploits/windows/local/7843.c,Browser3D 3.5 - '.sfs' Local Stack Overflow,1970-01-01,SimO-s0fT,local,windows,,c
+7923,exploits/windows/local/7923.c,Total Video Player 1.3.7 - '.m3u' Local Buffer Overflow,1970-01-01,SimO-s0fT,local,windows,,c
+7929,exploits/windows/local/7929.c,GOM Player 2.0.12 - '.pls' Universal Buffer Overflow,1970-01-01,Stack,local,windows,,c
+7974,exploits/windows/local/7974.c,Euphonics Audio Player 1.0 (Windows XP SP3) - '.pls' Local Buffer Overflow,1970-01-01,Single Eye,local,windows,,c
+8138,exploits/windows/local/8138.c,VUplayer 2.49 - '.cue' Local Buffer Overflow,1970-01-01,Assed Edin,local,windows,,c
+8214,exploits/windows/local/8214.c,Rosoft Media Player 4.2.1 (Windows XP SP2/3 French) - Local Buffer Overflow,1970-01-01,SimO-s0fT,local,windows,,c
+8411,exploits/windows/local/8411.c,WM Downloader 3.0.0.9 - '.m3u' Universal Stack Overflow,1970-01-01,Stack,local,windows,,c
+8444,exploits/windows/local/8444.cpp,Star Downloader Free 1.45 - '.dat' Universal Overwrite (SEH),1970-01-01,dun,local,windows,,cpp
+8540,exploits/windows/local/8540.c,SDP Downloader 2.3.0 - '.asx' Local Buffer Overflow (SEH) (2),1970-01-01,SimO-s0fT,local,windows,,c
+8783,exploits/windows/local/8783.c,Winamp 5.551 - MAKI Parsing Integer Overflow,1970-01-01,n00b,local,windows,,c
+8863,exploits/windows/local/8863.c,Atomix Virtual Dj Pro 6.0 - Local Stack Buffer Overflow (SEH),1970-01-01,fl0 fl0w,local,windows,,c
+9142,exploits/windows/local/9142.c,Live For Speed 2 Version Z - '.Mpr' Local Buffer Overflow,1970-01-01,n00b,local,windows,,c
+10298,exploits/windows/local/10298.c,Jasc Paint Shop Pro 8 - Local Universal Buffer Overflow,1970-01-01,fl0 fl0w,local,windows,,c
+10556,exploits/windows/local/10556.c,PlayMeNow 7.3/7.4 - '.M3U' Playlist File Buffer,1970-01-01,Gr33nG0bL1n,local,windows,,c
+10619,exploits/windows/local/10619.c,Easy RM to MP3 27.3.700 (Windows XP SP2) - Local Buffer Overflow,1970-01-01,bibi-info,local,windows,,c
+10646,exploits/windows/local/10646.c,CastRipper (Windows XP SP2) - '.m3u' Local Stack Buffer Overflow,1970-01-01,bibi-info,local,windows,,c
+10745,exploits/windows/local/10745.c,Mini-stream Ripper 3.0.1.1 - '.pls' Universal Local Buffer Overflow,1970-01-01,mr_me,local,windows,,c
+11112,exploits/windows_x86/local/11112.c,HTMLDOC 1.9.x-r1629 (Windows x86) - '.html' Local Buffer Overflow,1970-01-01,fl0 fl0w,local,windows_x86,,c
+11139,exploits/windows/local/11139.c,Winamp 5.05 < 5.13 - '.ini' Local Stack Buffer Overflow,1970-01-01,fl0 fl0w,local,windows,,c
+11174,exploits/windows/local/11174.c,VideoLAN VLC Media Player 0.8.6 a/b/c/d (Win32 Universal) - '.ass' Local Buffer Overflow,1970-01-01,fl0 fl0w,local,windows,,c
+11315,exploits/windows/local/11315.c,DeepBurner pro 1.9.0.228 - '.dbr' file Buffer Overflow (Universal),1970-01-01,fl0 fl0w,local,windows,,c
+14092,exploits/windows/local/14092.c,Kingsoft Writer 2010 - Local Stack Buffer Overflow,1970-01-01,fl0 fl0w,local,windows,,c
+12497,exploits/windows/local/12497.c,PhotoFiltre Studio X - '.tif' Local Buffer Overflow,1970-01-01,fl0 fl0w,local,windows,,c
+15376,exploits/windows/local/15376.c,Trend Micro Titanium Maximum Security 2011 - Local Kernel,1970-01-01,Nikita Tarakanov,local,windows,,c
+15461,exploits/windows/local/15461.c,G Data TotalCare 2011 - Local Kernel,1970-01-01,Nikita Tarakanov,local,windows,,c
+15888,exploits/windows/local/15888.c,Bywifi 2.8.1 - Local Stack Buffer Overflow,1970-01-01,anonymous,local,windows,,c
+17820,exploits/windows/local/17820.c,Aika 0.2 - colladaconverter Xml Parsing Buffer Overflow,1970-01-01,isciurus,local,windows,,c
+17902,exploits/windows/local/17902.c,Norman Security Suite 8 - 'nprosec.sys' Local Privilege Escalation,1970-01-01,Xst3nZ,local,windows,,c
+18258,exploits/windows/local/18258.c,TORCS 1.3.1 - acc Buffer Overflow,1970-01-01,Andrés Gómez,local,windows,,c
+21831,exploits/windows/local/21831.c,PLIB 1.8.5 - 'ssg/ssgParser.cxx' Local Buffer Overflow,1970-01-01,Andrés Gómez,local,windows,,c
+33593,exploits/windows/local/33593.c,Microsoft Windows XP/Vista/2000/2003 - Double-Free Memory Corruption Privilege Escalation,1970-01-01,Tavis Ormandy,local,windows,,c
+35992,exploits/windows/local/35992.c,K7 Computing (Multiple Products) - Arbitrary Write Privilege Escalation,1970-01-01,Parvez Anwar,local,windows,,c
+35905,exploits/windows/local/35905.c,Comodo Backup 4.4.0.0 - Null Pointer Dereference Privilege Escalation,1970-01-01,Parvez Anwar,local,windows,,c
+35953,exploits/windows/local/35953.c,McAfee Data Loss Prevention Endpoint - Arbitrary Write Privilege Escalation,1970-01-01,Parvez Anwar,local,windows,,c
+35964,exploits/windows/local/35964.c,Symantec Altiris Agent 6.9 (Build 648) - Local Privilege Escalation,1970-01-01,Parvez Anwar,local,windows,,c
+37052,exploits/windows/local/37052.c,Microsoft Windows - 'CNG.SYS' Kernel Security Feature Bypass (MS15-052),1970-01-01,4B5F5F4B,local,windows,,c
+37716,exploits/windows/local/37716.c,Heroes of Might and Magic III - Map Parsing Arbitrary Code Execution,1970-01-01,John AAkerblom,local,windows,,c
+37732,exploits/windows_x86/local/37732.c,Microsoft Windows XP SP3 (x86) / 2003 SP2 (x86) - 'NDProxy' Local Privilege Escalation (MS14-002),1970-01-01,Tomislav Paskalev,local,windows_x86,,c
+37755,exploits/windows/local/37755.c,Microsoft Windows Server 2003 SP2 - TCP/IP IOCTL Privilege Escalation (MS14-070),1970-01-01,Tomislav Paskalev,local,windows,,c
+40069,exploits/windows/local/40069.cpp,GE Proficy HMI/SCADA CIMPLICITY 8.2 - Local Privilege Escalation,1970-01-01,Zhou Yu,local,windows,,cpp
+41015,exploits/windows/local/41015.c,Microsoft Windows Kernel - 'win32k.sys NtSetWindowLongPtr' Local Privilege Escalation (MS16-135) (2),1970-01-01,Rick Larabee,local,windows,,c
+41176,exploits/windows/local/41176.c,Palo Alto Networks Terminal Services Agent 7.0.3-13 - Integer Overflow,1970-01-01,Parvez Anwar,local,windows,,c
+43929,exploits/windows/local/43929.c,System Shield 5.0.0.136 - Privilege Escalation,1970-01-01,Parvez Anwar,local,windows,,c
+41721,exploits/windows_x86-64/local/41721.c,Fortinet FortiClient 5.2.3 (Windows 10 x64 Pre-Anniversary) - Local Privilege Escalation,1970-01-01,sickness,local,windows_x86-64,,c
+41722,exploits/windows_x86-64/local/41722.c,Fortinet FortiClient 5.2.3 (Windows 10 x64 Post-Anniversary) - Local Privilege Escalation,1970-01-01,sickness,local,windows_x86-64,,c
+41705,exploits/windows_x86/local/41705.cpp,Fortinet FortiClient 5.2.3 (Windows 10 x86) - Local Privilege Escalation,1970-01-01,sickness,local,windows_x86,,cpp
+45339,exploits/windows_x86-64/local/45339.c,Cisco Umbrella Roaming Client 2.0.168 - Local Privilege Escalation,1970-01-01,ParagonSec,local,windows_x86-64,,c
+45401,exploits/windows/local/45401.c,STOPzilla AntiMalware 6.5.2.59 - Privilege Escalation (1),1970-01-01,Parvez Anwar,local,windows,,c
+46155,exploits/windows/local/46155.c,Dokany 1.2.0.1000 - Stack-Based Buffer Overflow Privilege Escalation,1970-01-01,Parvez Anwar,local,windows,,c
+47755,exploits/windows/local/47755.c,Microsoft Windows 10 - 'WSReset' UAC Protection Bypass (propsys.dll),1970-01-01,valen,local,windows,,c
+42,exploits/windows/remote/42.c,Winmail Mail Server 2.3 Build 0402 - Remote Format String,1970-01-01,ThreaT,remote,windows,25.0,c
+92,exploits/windows/remote/92.c,Microsoft WordPerfect Document Converter (Windows NT4 Workstation SP5/SP6 French) - File Template Buffer Overflow (MS03-036),1970-01-01,valgasu,remote,windows,,c
+112,exploits/windows/remote/112.c,mIRC 6.1 - 'IRC' Protocol Remote Buffer Overflow,1970-01-01,blasty,remote,windows,,c
+121,exploits/windows/remote/121.c,Microsoft FrontPage Server Extensions - 'fp30reg.dll' (MS03-051),1970-01-01,Adik,remote,windows,80.0,c
+149,exploits/windows/remote/149.c,RhinoSoft Serv-U FTPd Server 3.x/4.x - 'SITE CHMOD' Remote Overflow,1970-01-01,lion,remote,windows,21.0,c
+164,exploits/windows/remote/164.c,Foxmail 5.0 - 'PunyLib.dll' Remote Stack Overflow,1970-01-01,xfocus,remote,windows,,c
+472,exploits/windows/remote/472.c,Microsoft Windows - JPEG GDI+ Overflow Shellcode,1970-01-01,FoToZ,remote,windows,,c
+640,exploits/windows/remote/640.c,Microsoft Windows - Compressed Zipped Folders (MS04-034),1970-01-01,tarako,remote,windows,,c
+734,exploits/windows/remote/734.c,Microsoft Windows - NetDDE Remote Buffer Overflow (MS04-031),1970-01-01,houseofdabus,remote,windows,139.0,c
+759,exploits/windows/remote/759.cpp,Apple iTunes - Playlist Buffer Overflow Download Shellcode,1970-01-01,ATmaCA,remote,windows,,cpp
+765,exploits/windows/remote/765.c,Microsoft Internet Explorer - '.ANI' Universal (MS05-002),1970-01-01,houseofdabus,remote,windows,,c
+802,exploits/windows/remote/802.cpp,MSN Messenger - '.png' Image Buffer Overflow Download Shellcode,1970-01-01,ATmaCA,remote,windows,,cpp
+847,exploits/windows/remote/847.cpp,BadBlue 2.55 - Web Server Remote Buffer Overflow,1970-01-01,tarako,remote,windows,80.0,cpp
+944,exploits/windows/remote/944.c,WheresJames Webcam Publisher Beta 2.0.0014 - Remote Buffer Overflow,1970-01-01,tarako,remote,windows,,c
+967,exploits/windows/remote/967.cpp,Golden FTP Server Pro 2.52 - Remote Buffer Overflow (1),1970-01-01,ATmaCA,remote,windows,21.0,cpp
+990,exploits/windows/remote/990.c,BakBone NetVault 6.x/7.x - Remote Heap Buffer Overflow (1),1970-01-01,nolimit,remote,windows,20031.0,c
+1026,exploits/windows/remote/1026.cpp,e-Post SPA-PRO 4.01 - 'imap' Remote Buffer Overflow,1970-01-01,Jerome Athias,remote,windows,143.0,cpp
+1028,exploits/windows/remote/1028.c,Crob FTP Server 3.6.1 - Remote Stack Overflow,1970-01-01,Leon Juranic,remote,windows,,c
+1066,exploits/windows/remote/1066.cpp,Microsoft Outlook Express - NNTP Buffer Overflow (MS05-030),1970-01-01,eyas,remote,windows,,cpp
+1178,exploits/windows/remote/1178.c,Microsoft IIS 5.0 - '500-100.asp' Server Name Spoof,1970-01-01,Lympex,remote,windows,,c
+1190,exploits/windows/remote/1190.c,DameWare Mini Remote Control 4.0 < 4.9 - Client Agent Remote Overflow,1970-01-01,jpno5,remote,windows,6129.0,c
+1223,exploits/windows/remote/1223.c,Mercury/32 Mail Server 4.01a (Pegasus) - IMAP Buffer Overflow,1970-01-01,c0d3r,remote,windows,143.0,c
+1277,exploits/windows/remote/1277.c,Mirabilis ICQ 2003a - Remote Buffer Overflow Download Shellcode,1970-01-01,ATmaCA,remote,windows,,c
+1421,exploits/windows/remote/1421.cpp,Veritas NetBackup 4/5 - Volume Manager Daemon Remote Buffer Overflow,1970-01-01,Patrick Thomassen,remote,windows,13701.0,cpp
+1458,exploits/windows/remote/1458.cpp,Winamp 5.12 - '.pls' Remote Buffer Overflow (1),1970-01-01,ATmaCA,remote,windows,,cpp
+2265,exploits/windows/remote/2265.c,Microsoft Windows - NetpIsRemote() Remote Overflow (MS06-040) (2),1970-01-01,ub3rst4r,remote,windows,445.0,c
+2283,exploits/windows/remote/2283.c,TIBCO Rendezvous 7.4.11 - add router Remote Buffer Overflow,1970-01-01,Andres Tarasco,remote,windows,,c
+2601,exploits/windows/remote/2601.c,Ipswitch IMail Server 2006 / 8.x - 'RCPT' Remote Stack Overflow,1970-01-01,Greg Linares,remote,windows,25.0,c
+2651,exploits/windows/remote/2651.c,MiniHTTPServer Web Forum & File Sharing Server 4.0 - Add User,1970-01-01,Greg Linares,remote,windows,,c
+2753,exploits/windows/remote/2753.c,Microsoft Internet Explorer 6/7 - XML Core Services Remote Code Execution (3),1970-01-01,M03,remote,windows,,c
+2800,exploits/windows/remote/2800.cpp,Microsoft Windows - Wkssvc NetrJoinDomain2 Stack Overflow (MS06-070),1970-01-01,S A Stevens,remote,windows,,cpp
+3296,exploits/windows/remote/3296.c,μTorrent (uTorrent) 1.6 build 474 - 'announce' Key Remote Heap Overflow,1970-01-01,defsec,remote,windows,,c
+3395,exploits/windows/remote/3395.c,WebMod 0.48 - Content-Length Remote Buffer Overflow,1970-01-01,cybermind,remote,windows,,c
+3462,exploits/windows/remote/3462.cpp,NewsReactor 20070220 - Article Grabbing Remote Buffer Overflow (1),1970-01-01,Marsu,remote,windows,,cpp
+3463,exploits/windows/remote/3463.cpp,NewsReactor 20070220 - Article Grabbing Remote Buffer Overflow (2),1970-01-01,Marsu,remote,windows,,cpp
+3544,exploits/windows/remote/3544.c,Microsoft DNS Server - Dynamic DNS Update/Change,1970-01-01,Andres Tarasco,remote,windows,,c
+4157,exploits/windows/remote/4157.cpp,SAP DB 7.4 - WebTools Remote Overwrite (SEH),1970-01-01,Heretic2,remote,windows,9999.0,cpp
+4316,exploits/windows/remote/4316.cpp,Mercury/32 Mail Server 3.32 < 4.51 - SMTP EIP Overwrite,1970-01-01,Heretic2,remote,windows,25.0,cpp
+4651,exploits/windows/remote/4651.cpp,Apple QuickTime 7.2/7.3 (Windows Vista/XP) - RSTP Response Code Execution,1970-01-01,InTeL,remote,windows,,cpp
+4745,exploits/windows/remote/4745.cpp,Microsoft Windows Message Queuing Service - RPC Buffer Overflow (MS07-065) (1),1970-01-01,axis,remote,windows,,cpp
+4934,exploits/windows/remote/4934.c,Microsoft Windows Message Queuing Service - RPC Buffer Overflow (MS07-065) (2),1970-01-01,Marcin Kozlowski,remote,windows,,c
+5694,exploits/windows/remote/5694.cpp,ASUS DPC Proxy 2.0.0.16/19 - Remote Buffer Overflow,1970-01-01,Heretic2,remote,windows,623.0,cpp
+5827,exploits/windows/remote/5827.cpp,Alt-N SecurityGateway 1.00-1.01 - Remote Stack Overflow,1970-01-01,Heretic2,remote,windows,4000.0,cpp
+6121,exploits/windows/remote/6121.c,IntelliTamper 2.0.7 - HTML Parser Remote Buffer Overflow,1970-01-01,r0ut3r,remote,windows,,c
+6124,exploits/windows/remote/6124.c,Microsoft Access - 'Snapview.ocx 10.0.5529.0' ActiveX Remote File Download,1970-01-01,callAX,remote,windows,,c
+6195,exploits/windows/remote/6195.c,IntelliTamper 2.07 - 'imgsrc' Remote Buffer Overflow,1970-01-01,r0ut3r,remote,windows,,c
+6238,exploits/windows/remote/6238.c,IntelliTamper 2.07/2.08 Beta 4 - A HREF Remote Buffer Overflow,1970-01-01,kralor,remote,windows,,c
+9303,exploits/windows/remote/9303.c,VideoLAN VLC Media Player 0.8.6f - 'smb://' URI Handling Remote Buffer Overflow,1970-01-01,Pankaj Kohli,remote,windows,,c
+9800,exploits/windows/remote/9800.cpp,Serv-U Web Client 9.0.0.5 - Remote Buffer Overflow (2),1970-01-01,Megumi Yanagishita,remote,windows,80.0,cpp
+28225,exploits/windows/remote/28225.c,Microsoft PowerPoint 2003 - 'powerpnt.exe' Remote Overflow,1970-01-01,naveed afzal,remote,windows,,c
