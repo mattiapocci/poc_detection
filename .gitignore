@@ -15,3 +15,5 @@ SAFETorch/list_expid_cves.txt
 SAFETorch/Malwarebazaar/
 Scrapers/source/
 Scrapers/*.pt
+datasets/handrafted_malware/
+datasets/pocs/
