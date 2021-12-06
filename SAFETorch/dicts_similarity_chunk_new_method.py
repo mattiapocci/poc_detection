@@ -80,12 +80,12 @@ interesting_functions = {}
 
 
 # qui metti solo le poc di interesse da calcolare
-def is_relevant_poc(name):
-    pocs_to_check = ['2278','2800','4263','8390','8444','20784','40069','44462','3648','4998','43773','149','388','403','1223','2650','2824','2861','2873','3648','3684','3777','7929','8180','10164','11174','12497','13509','13887','14092','15063','15420','16022','17273','41072']
-    for n in pocs_to_check:
-        if n in name:
-            return True
-    return False
+# def is_relevant_poc(name):
+#     pocs_to_check = ['2278','2800','4263','8390','8444','20784','40069','44462','3648','4998','43773','149','388','403','1223','2650','2824','2861','2873','3648','3684','3777','7929','8180','10164','11174','12497','13509','13887','14092','15063','15420','16022','17273','41072']
+#     for n in pocs_to_check:
+#         if n in name:
+#             return True
+#     return False
 
 
 
@@ -107,9 +107,9 @@ while i < last_index:
     key = ''
 
     for poc in tqdm(exploits_embeddings.keys()):
-        if not (is_relevant_poc(poc)):
-            tqdm.write('Skipping ' + poc)
-            continue
+        # if not (is_relevant_poc(poc)):
+        #     tqdm.write('Skipping ' + poc)
+        #     continue
         interesting_functions[exe_hash][poc] = {}
         if not (poc in num_poc_functions.keys()):
             num_poc_functions[poc] = len(exploits_embeddings[poc])
