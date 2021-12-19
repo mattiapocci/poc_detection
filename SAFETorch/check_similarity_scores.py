@@ -14,9 +14,9 @@ for score in input:
     scores = input[score]
     scores = dict(sorted(scores.items(), key=lambda item: item[1], reverse=True))
     i = 1
-    print('Top ' + str(n) + ' similar exploits: ')
+    print('Top ' + str(n) + ' similar exploits to ' + score + ': ')
     for elem in scores:
         if i>n:
-            sys.exit(0)
+            break
         print('('+ str(i) + ') '+ 'ID: ' + str(elem) + ' Similarity: ' + str(scores[elem]))
         i = i + 1
