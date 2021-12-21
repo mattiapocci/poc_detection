@@ -92,6 +92,10 @@ confronti_da_fare = list(set([item.split('_')[-1] for item in list(exploits_embe
 
 while i < last_index:
     exe_hash = hashlist[i]
+    if not (exe_hash in confronti_da_fare):
+            tqdm.write(exe_hash + ' Not relevant')
+            i+=1
+            continue
 #for exe_hash in tqdm(malware_embeddings.keys()):    
     tqdm.write('Beginning ' + exe_hash)
     if exe_hash in means.keys():
@@ -103,9 +107,6 @@ while i < last_index:
     key = ''
 
     for poc in tqdm(exploits_embeddings.keys()):
-        if not (poc.split('_')[0] in confronti_da_fare):
-            tqdm.write(poc + ' Not relevant')
-            continue
         tqdm.write(poc + ' Starting')
         count = 0
         acc = 0
