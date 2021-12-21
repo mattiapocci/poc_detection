@@ -81,21 +81,24 @@ try:
 except:
     means = {}
 
-hashlist = list(malware_embeddings.keys())
+
 i = first_index
 pbar = tqdm(total=last_index-first_index)
 # confronti_da_fare = ['2815','5142','13921','41176', '4403', '10563','42161','49964']
 confronti_da_fare = ['2210','37052','40745','2204']
 # confronti_da_fare = ['10563','42161','49964']
 confronti_da_fare = list(set([item.split('_')[-1] for item in list(exploits_embeddings.keys())]))
+keyss = list(malware_embeddings.keys())
+hashlist = []
+
+for elem in keyss:
+    if elem.split('_')[0] in confronti_da_fare:
+        hashlist.append(elem)
 
 
 while i < last_index:
     exe_hash = hashlist[i]
-    if not (exe_hash in confronti_da_fare):
-            tqdm.write(exe_hash + ' Not relevant')
-            i+=1
-            continue
+    
 #for exe_hash in tqdm(malware_embeddings.keys()):    
     tqdm.write('Beginning ' + exe_hash)
     if exe_hash in means.keys():
