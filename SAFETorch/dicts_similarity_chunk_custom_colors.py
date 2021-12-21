@@ -95,7 +95,7 @@ for elem in keyss:
 
 
 while i < last_index:
-    exe_hash = hashlist[j]
+    exe_hash = hashlist[i]
     
 #for exe_hash in tqdm(malware_embeddings.keys()):    
     tqdm.write('Beginning ' + exe_hash)
