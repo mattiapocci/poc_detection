@@ -5,6 +5,7 @@ cvelist.json
 .vscode/settings.json
 *.obj
 *.exe
+*.asm
 venvs/
 venv/
 SAFETorch/SAFEtorch/
@@ -17,3 +18,5 @@ Scrapers/source/
 Scrapers/*.pt
 datasets/handrafted_malware/
 datasets/pocs/
+datasets/permutations/exes
+datasets/
